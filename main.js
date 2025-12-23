@@ -153,10 +153,6 @@ const pokemon = {
   151: "mew"
 };
 
-function displayEntry(){
-  
-}
-
 // Make function to prepend money icons
 function renderIcons(containerId, count, iconPath, className) {
   const container = document.getElementById(containerId);
@@ -308,6 +304,9 @@ function displayChange() {
   const diff  = cash - price; // Get difference
   const diffInt = Math.floor(diff); // Make difference an integer
   
+  let anchor = document.getElementById("learn-more-link");
+  anchor.href = `https://pokemondb.net/pokedex/${pokemon[diffInt]}`;
+
   // Update DOM and the counts for each bill and coin in HTML
   document.getElementById("twenties-count").textContent = twenties;
   document.getElementById("tens-count").textContent = tens;
