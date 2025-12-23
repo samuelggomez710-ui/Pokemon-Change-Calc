@@ -1,8 +1,8 @@
 /* Import custom font */
 @font-face {
   font-family: "Pokemon GB";
-  src: url("../fonts/Pokemon GB.woff") format('woff'),
-       url("../fonts/Pokemon GB.ttf") format('truetype');
+  src: url("./fonts/Pokemon GB.woff") format('woff'),
+       url("./fonts/Pokemon GB.ttf") format('truetype');
 }
 
 body {
