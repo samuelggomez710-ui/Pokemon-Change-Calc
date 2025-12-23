@@ -153,6 +153,10 @@ const pokemon = {
   151: "mew"
 };
 
+function displayEntry(){
+  
+}
+
 // Make function to prepend money icons
 function renderIcons(containerId, count, iconPath, className) {
   const container = document.getElementById(containerId);
@@ -327,5 +331,6 @@ function displayChange() {
 
 // Connect the button to the function
 document.getElementById("calculate-btn").addEventListener("click", displayChange);
+document.getElementById("learn-more").addEventListener("click", displayEntry);
 
 // Use for pokedex entry: https://pokemondb.net/pokedex/eevee
