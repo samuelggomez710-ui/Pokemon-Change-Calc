@@ -159,15 +159,15 @@ function displayChange() {
   document.getElementById("nickels-count").textContent = nickels;
   document.getElementById("pennies-count").textContent = pennies;
 
-  renderIcons("twenties-icons", twenties, "./images/Money/20bill.png", "bill-icon");
-  renderIcons("tens-icons", tens, "./images/Money/10bill.png", "bill-icon");
-  renderIcons("fives-icons", fives, "./images/Money/5bill.png", "bill-icon");
-  renderIcons("ones-icons", ones, "./images/Money/1bill.png", "bill-icon");
-  renderIcons("quarters-icons", quarters, "./images/Money/quarter.png", "coin-icon");
-  renderIcons("dimes-icons", dimes, "./images/Money/dime.png", "coin-icon");
-  renderIcons("nickels-icons", nickels, "./images/Money/nickel.png", "coin-icon");
-  renderIcons("pennies-icons", pennies, "./images/Money/penny.png", "coin-icon");
-  renderPokemon ("pokemon-icons", 1, `./images/pokemon/${diffInt}.png`,"pokemon-icon");
+  renderIcons("twenties-icons", twenties, "./Images/Money/20bill.png", "bill-icon");
+  renderIcons("tens-icons", tens, "./Images/Money/10bill.png", "bill-icon");
+  renderIcons("fives-icons", fives, "./Images/Money/5bill.png", "bill-icon");
+  renderIcons("ones-icons", ones, "./Images/Money/1bill.png", "bill-icon");
+  renderIcons("quarters-icons", quarters, "./Images/Money/quarter.png", "coin-icon");
+  renderIcons("dimes-icons", dimes, "./Images/Money/dime.png", "coin-icon");
+  renderIcons("nickels-icons", nickels, "./Images/Money/nickel.png", "coin-icon");
+  renderIcons("pennies-icons", pennies, "./Images/Money/penny.png", "coin-icon");
+  renderPokemon ("pokemon-icons", 1, `./Images/pokemon/${diffInt}.png`,"pokemon-icon");
 }
 // "images/Money/penny.png"
 //"images/Money/1bill.png

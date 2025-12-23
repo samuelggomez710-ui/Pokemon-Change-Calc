@@ -19,7 +19,7 @@ body {
   text-align: center;
   position: relative;
 
-  border-image: url('/images/Poke/frame-hd.png') 42 round;
+  border-image: url('/Images/Poke/frame-hd.png') 42 round;
   border-width: 21px;
   border-style: solid;
   
@@ -76,7 +76,7 @@ body {
     text-align: center;
     position: relative;
 
-    border-image: url('../images/Poke/frame-hd.png') 42 round;
+    border-image: url('../Images/Poke/frame-hd.png') 42 round;
     border-width: 21px;
     border-style: solid;
 
@@ -104,7 +104,7 @@ body {
 
 .table-container{
     /* make containers responsive and horizontally centered */
-    border-image: url('images/Poke/frame-hd.png') 42 round;
+    border-image: url('Images/Poke/frame-hd.png') 42 round;
     border-width: 21px;
     border-style: solid;
     text-align: center;
