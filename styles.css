@@ -1,0 +1,158 @@
+/* Import custom font */
+@font-face {
+  font-family: "Pokemon GB";
+  src: url("/fonts/Pokemon GB.woff") format('woff'),
+       url("/fonts/Pokemon GB.ttf") format('truetype');
+}
+
+body {
+    /* Set body background color */
+    background-color: #f9fcda;
+    font-family: "Pokemon GB", sans-serif;
+    font-size: 15px;
+    display: grid;
+    place-items: center;
+    gap: 20px;
+}
+
+.input-fields {
+  text-align: center;
+  position: relative;
+
+  border-image: url('/images/Poke/frame-hd.png') 42 round;
+  border-width: 21px;
+  border-style: solid;
+  
+  padding: 20px;
+  margin: 0 auto;
+
+  width: 50%;
+  max-width: 600px;
+}
+
+/* Give space between input fields */
+.received-container {
+    margin-top: 20px;
+}
+
+/* .received-container, .price-container {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    background-color: lightgray;
+    border-radius: 4px;
+    border: 1px solid black;
+} */
+
+.calculate-btn-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#calculate-btn {
+    /* Style calculate button */
+    padding: 20px 20px;
+    font-size: 15px;
+    font-family: "Pokemon GB", sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid black;
+    background-color: #131313;
+    color: rgb(255, 255, 255);
+}
+
+#calculate-btn:hover {
+    /* Change color of button when hovered over */
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.error-message {
+    /* Style for error message */
+    color: rgb(255, 0, 0);
+    text-align: center;
+    position: relative;
+
+    border-image: url('../images/Poke/frame-hd.png') 42 round;
+    border-width: 21px;
+    border-style: solid;
+
+    padding: 20px;
+    margin: 0 auto;
+
+    max-width: 600px;
+    width: 50%;
+}
+
+.text-change {
+    /* Style for overall change section */
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+
+.change-breakdown {
+    /* Center Change text */
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.table-container{
+    /* make containers responsive and horizontally centered */
+    border-image: url('images/Poke/frame-hd.png') 42 round;
+    border-width: 21px;
+    border-style: solid;
+    text-align: center;
+    max-width: 600px;
+    width: 300px;
+}
+/* Style change list */
+#bills-list li, #coins-list li {
+  margin: 8px 0;
+  font-size: 18px;
+}
+/* Style and size change */
+.bill-icon, .coin-icon {
+  width: 50px;
+  margin-right: -70px;  /* overlap leftward */
+  transform: rotate(-2deg);
+}
+
+/* Bills: overlap right to left */
+#twenties-icons, #tens-icons, #fives-icons, #ones-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* Coins: normal flow, spaced evenly */
+#quarters-icons, #dimes-icons, #nickels-icons, #pennies-icons {
+  display: flex;
+  flex-direction: row; /* This line makes the icons flow to the right. row-reverse changes to left*/
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+/* Give first spacing */
+.bill-icon:last-child,
+.coin-icon:last-child {
+  margin-right: 0;    /* first icon (visually rightmost) gets full spacing */
+}
+/* Style and size pokemon */
+.pokemon-icon {
+  width: 200px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}

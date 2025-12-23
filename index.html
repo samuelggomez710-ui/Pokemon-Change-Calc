@@ -4,11 +4,112 @@
   <head>
     <meta charset="utf-8">
     <title>Change Calculator</title>
+    <!-- Link the style.css file to add style -->
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <!-- Write your markup here -->
 
+  <body>
+    <div class = "header-container">
+      <!-- Make 2 input fields for the price of the item and the cash given. -->
+      <div class = "input-fields">
+        <div class = "price-container">
+          <!-- Makes the label and input container for price -->
+          <div class = "labels">
+          <label for = "price">Price of cart ($):</label>
+          <input type ="number" id="price" placeholder="$$$">
+         </div>
+        </div>
+        <!-- Makes the label and input container for cash received -->
+        <div class = "received-container">
+          <div id = "received-container">
+          <label for = "cash">Cash received ($):</label>
+          <input type ="number" id="cash" placeholder="$$$">
+          </div>
+        </div>
+      </div>
+      <!-- Make a button to calculate the change. -->
+      <div class="calculate-btn-container"> <!-- Div required to align text to center -->
+        <button id="calculate-btn">Calculate change</button>
+      </div>
+      <div id="error-message" class="error-message" style="display: none;">   
+      </div>
+    </div>
+
+
+    <!-- Set up the overall change-->
+    <div class ="text-change">
+      <h2>Change due:</h2>
+      <div id="total-change">
+      <span id="total-change-amount">$0.00</span>
+      </div>
+    </div>
+    <!-- Set up the change breakdown section -->
+    <div class="change-breakdown">
+      <h2>Bills & Coins:</h2>
+      <div id="change-output" style="display: none;"></div>
+    </div>
+    <!-- Combine the bills and coins containers -->
+    <div class ="table-container">
+      <!-- Now we need to put the list for quarters, dimes, nickels, and pennies -->
+      <div class = "bills-container">
+        <div id="bills-list">
+          <ul>
+            <li>
+              $20: <span id="twenties-count">0</span>
+              <span id="twenties-icons"></span>
+            </li>
+            <li>
+              $10: <span id="tens-count">0</span>
+              <span id="tens-icons"></span>
+            </li>
+            <li>
+              $5: <span id="fives-count">0</span>
+              <span id="fives-icons"></span>
+            </li>
+            <li>
+              $1: <span id="ones-count">0</span>
+              <span id="ones-icons"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class = "coins-container">
+        <div id="coins-list">
+          <ul>
+            <li>
+              Quarters: <span id="quarters-count">0</span>
+              <span id="quarters-icons"></span>
+            </li>
+            <li>
+              Dimes: <span id="dimes-count">0</span>
+              <span id="dimes-icons"></span>
+            </li>
+            <li>
+              Nickels: <span id="nickels-count">0</span>
+              <span id="nickels-icons"></span>
+            </li>
+            <li>
+              Pennies: <span id="pennies-count">0</span>
+              <span id="pennies-icons"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      </div>
+
+    <div class = "pokemon">
+      Your pokemon:
+    </div>
+    <div id = pokemon-icons>
+
+    </div>
+    <button id = learn-more> Learn more </button>
     <!-- Don't forget to add your <script> tag here -->
+  <script src="main.js" defer></script>
+
+  <!-- In case someone puts in a negative number -->
 
   </body>
 </html>
+
