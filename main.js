@@ -303,7 +303,11 @@ function displayChange() {
 
   const diff  = cash - price; // Get difference
   const diffInt = Math.floor(diff); // Make difference an integer
-  
+
+  // Update pokemon name
+  const pokeName = document.getElementById("pokemon-name");
+  pokeName.textContent = `${pokemon[diffInt]}`;
+  // Update learn more button to current pokemon
   let anchor = document.getElementById("learn-more-link");
   anchor.href = `https://pokemondb.net/pokedex/${pokemon[diffInt]}`;
 
