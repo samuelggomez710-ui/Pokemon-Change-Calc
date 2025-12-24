@@ -182,32 +182,35 @@ function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-
-
 // Make functions to get values
 function getPrice() {
   // Get price from input field, search through DOM by ID and turn the string into a numnber
   return Number(document.getElementById("price").value);
 }
+
 function getCash() {
   return Number(document.getElementById("cash").value);
 }
+
 function getChange() {
   // Calculate change using previous functions
   return getCash() - getPrice();
 }
+
   // Run calculate when pressing Enter in either input box
   document.getElementById("price").addEventListener("keydown", function(event) {
     if (event.key === "Return" || event.key === "Enter") {
       displayChange();
     }
   });
+
   // Run if enter is pressed
   document.getElementById("cash").addEventListener("keydown", function(event) {
     if (event.key === "Return" || event.key === "Enter") {
       displayChange();
     }
   });
+  
 // Make function to display change
 function displayChange() {
   // Defines change by using previous function

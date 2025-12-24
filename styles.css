@@ -5,6 +5,13 @@
        url("./fonts/Pokemon GB.ttf") format('truetype');
 }
 
+header {
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
 body {
     /* Set body background color */
     background-color: #f9fcda;
