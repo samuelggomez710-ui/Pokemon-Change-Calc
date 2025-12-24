@@ -225,8 +225,8 @@ function displayChange() {
   // Show bottom pokemon text
   const yourPoke = document.getElementById("your-poke-text");
   const pokeLink = document.getElementById("learn-more-link");
-  yourPoke.style.visibility = "visible";
-  pokeLink.style.visibility = "visible";
+  yourPoke.style.display = "none";
+  pokeLink.style.display = "none";
   // Check if inputs are empty
   if (price == "" || cash == "") {
     errorBox.textContent = "Please enter valid numbers for both fields.";
@@ -307,15 +307,29 @@ function displayChange() {
   const diffInt = Math.floor(diff); // Make difference an integer
 
   // Update pokemon name
+  const pokeIcon = document.getElementById("pokemon-icons");
   const pokeName = document.getElementById("pokemon-name");
   pokeName.textContent = capitalize(`${pokemon[diffInt]}`);
   // Update learn more button to current pokemon
   let anchor = document.getElementById("learn-more-link");
   // If pokemon is mr mime set proper link, otherwise run as normal
-  if (diffInt === 122) {
+  if (diffInt > 151) {
+    yourPoke.style.display = "none";
+    pokeLink.style.display = "none";
+    pokeName.style.display = "none";
+    pokeIcon.style.display = "none";
+  } else if (diffInt === 122) {
     anchor.href = "https://pokemondb.net/pokedex/mr-mime";
+    yourPoke.style.display = "block";
+    pokeLink.style.display = "block";
+    pokeName.style.display = "block";
+    pokeIcon.style.display = "block";
   } else {
     anchor.href = `https://pokemondb.net/pokedex/${pokemon[diffInt]}`;
+    yourPoke.style.display = "block";
+    pokeLink.style.display = "block";
+    pokeName.style.display = "block";
+    pokeIcon.style.display = "block";
   }
   // Update DOM and the counts for each bill and coin in HTML
   document.getElementById("twenties-count").textContent = twenties;

@@ -154,10 +154,10 @@ ul {
   image-rendering: pixelated;
 }
 #your-poke-text {
-  visibility: hidden;
+  display: none;
 }
 #learn-more-link {
-  visibility: hidden;
+  display: none;
 }
 #learn-more {
   padding: 20px 20px;
