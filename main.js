@@ -216,9 +216,14 @@ function displayChange() {
   const cash = getCash();
   // Set up error messages
   const errorBox = document.getElementById("error-message");
-    // Clear previous errors
+  // Clear previous errors
   errorBox.textContent = ""; 
   errorBox.style.display = "none";
+  // Show bottom pokemon text
+  const yourPoke = document.getElementById("your-poke-text");
+  const pokeLink = document.getElementById("learn-more-link");
+  yourPoke.style.visibility = "visible";
+  pokeLink.style.visibility = "visible";
   // Check if inputs are empty
   if (price == "" || cash == "") {
     errorBox.textContent = "Please enter valid numbers for both fields.";
