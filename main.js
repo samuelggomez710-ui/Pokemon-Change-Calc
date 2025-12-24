@@ -1,3 +1,9 @@
+// Clear input fields
+const changeField = document.getElementById("cash");
+const priceField = document.getElementById("price");
+changeField.textContent = "";
+priceField.textContent = "";
+
 // Declare the 151 pokemon
 const pokemon = {
   1: "bulbasaur",
