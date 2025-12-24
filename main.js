@@ -177,21 +177,14 @@ function renderPokemon(containerId, count, iconPath, className) {
   }
 }
 
-// Make function to append pokemon (redacted)
-//function renderPokemon (containerId, iconPath, className){
-//  const container = document.getElementById(containerId);
-//  container.innerHTML = "";
-//  const img = document.createElement("img");
-//  img.src = iconPath;
-//  img.className = className;
-//  container.append(img);
-//  img.onerror = () => {
-//    console.warn("Missing Pokemon image:", iconPath);
-//    img.src = "images/pokemon/default.png";
-//  };
-//}
+// Make function to capitalize the first letter of anything
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
-//Make functions to get values
+
+
+// Make functions to get values
 function getPrice() {
   // Get price from input field, search through DOM by ID and turn the string into a numnber
   return Number(document.getElementById("price").value);
@@ -209,6 +202,7 @@ function getChange() {
       displayChange();
     }
   });
+  // Run if enter is pressed
   document.getElementById("cash").addEventListener("keydown", function(event) {
     if (event.key === "Return" || event.key === "Enter") {
       displayChange();
@@ -306,7 +300,7 @@ function displayChange() {
 
   // Update pokemon name
   const pokeName = document.getElementById("pokemon-name");
-  pokeName.textContent = `${pokemon[diffInt]}`;
+  pokeName.textContent = capitalize(`${pokemon[diffInt]}`);
   // Update learn more button to current pokemon
   let anchor = document.getElementById("learn-more-link");
   anchor.href = `https://pokemondb.net/pokedex/${pokemon[diffInt]}`;
