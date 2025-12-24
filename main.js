@@ -311,12 +311,12 @@ function displayChange() {
   pokeName.textContent = capitalize(`${pokemon[diffInt]}`);
   // Update learn more button to current pokemon
   let anchor = document.getElementById("learn-more-link");
-  // If pokemon is mr mime fix name
+  // If pokemon is mr mime set proper link, otherwise run as normal
   if (pokemon[diffInt] === 122) {
-    pokemon[diffInt] = "mr-mime";
+    anchor.href = "https://pokemondb.net/pokedex/mr-mime";
+  } else {
+    anchor.href = `https://pokemondb.net/pokedex/${pokemon[diffInt]}`;
   }
-  anchor.href = `https://pokemondb.net/pokedex/${pokemon[diffInt]}`;
-
   // Update DOM and the counts for each bill and coin in HTML
   document.getElementById("twenties-count").textContent = twenties;
   document.getElementById("tens-count").textContent = tens;
