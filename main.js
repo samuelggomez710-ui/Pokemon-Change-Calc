@@ -312,7 +312,7 @@ function displayChange() {
   // Update learn more button to current pokemon
   let anchor = document.getElementById("learn-more-link");
   // If pokemon is mr mime set proper link, otherwise run as normal
-  if (pokemon[diffInt] === 122) {
+  if (diffInt === 122) {
     anchor.href = "https://pokemondb.net/pokedex/mr-mime";
   } else {
     anchor.href = `https://pokemondb.net/pokedex/${pokemon[diffInt]}`;
